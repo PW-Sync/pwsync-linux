@@ -1,3 +1,5 @@
+# Copyleft 🄯 2024  PW-Sync Team
+
 #! /bin/bash
 
 clear
