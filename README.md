@@ -7,4 +7,6 @@
 
 ### [Installation & Setup Guide](https://pw-sync.github.io/guides/linux.html)
 
+#### There's also a [GUI](https://github.com/PW-Sync/ciekly_lod) available. You should definitely check it out.
+
 ###### giv us a ⭐️ pleas.
