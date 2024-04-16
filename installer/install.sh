@@ -40,3 +40,5 @@ while [ "$ask" -eq "1" ]; do
 		echo " < ! > This is not what i expected..."
 	fi
 done
+
+# we'll think about that later on :))
