@@ -41,4 +41,30 @@ while [ "$ask" -eq "1" ]; do
 	fi
 done
 
+pwsyncconfig="$XDG_CONFIG_HOME/pwsync"
+
+if [ -d "$pwsyncconfig" ]; then
+	echo " < * > Old pwsync config found."
+	echo -n " < ? > Overwrite with a new one ? [y/N] > "
+	read ask
+	echo
+	declare -l ask
+	ask=$ask
+
+	if [ "$ask" == "y" ]; then
+		ask=1
+		rm -rf "$pwsyncconfig"
+	else
+		ask=-1
+	fi
+else
+	ask=1
+fi
+
+if [ "$ask" -eq "1" ]; then
+	echo " < * > Creating new config files."
+	mkdir "$pwsyncconfig"
+	touch "$pwsyncconfig/config.toml"
+fi
+
 # we'll think about that later on :))
