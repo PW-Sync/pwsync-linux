@@ -16,6 +16,7 @@ if [ -f "$XDG_CONFIG_HOME/retroarch/retroarch.cfg" ]; then
 	echo " < * > RetroArch config dir detected: $configpath"
 	echo -n " < ? > Is this correct ? [Y/n]       > "
 	read ask
+	echo
 	declare -l ask
 	ask=$ask
 
