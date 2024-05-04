@@ -5,3 +5,4 @@ edition = "2021"
 
 [dependencies]
 is-root = "0.1.*"
+toml = "0.8.*"

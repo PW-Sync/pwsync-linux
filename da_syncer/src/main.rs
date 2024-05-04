@@ -1,10 +1,11 @@
 // Copyleft 🄯 2024  PW-Sync Team
 
-use std::{ fs::metadata, env, process };
+use std::{ fs, env, process, io::Read };
 use is_root::is_root;
+use toml::Table;
 
 pub fn path_exists(path: &str) -> bool {
-    metadata(path).is_ok()
+    fs::metadata(path).is_ok()
 }
 
 fn main() {
@@ -22,4 +23,13 @@ fn main() {
         println!(" < !! > PWSync config not found. Did you use the install script?");
         process::exit(2);
     }
+
+    conf = format!("{conf}/config.toml");
+
+    let mut file = fs::File::open(conf).expect(" < !! > Failed to open PWSync config");
+    let mut contents = String::new();
+    file.read_to_string(&mut contents)
+        .expect(" < !! > Failed to read PWSync config");
+
+    print!("{}", contents);
 }

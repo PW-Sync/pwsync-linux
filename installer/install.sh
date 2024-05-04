@@ -64,7 +64,7 @@ fi
 if [ "$ask" -eq "1" ]; then
 	echo " < * > Creating new config files."
 	mkdir "$pwsyncconfig"
-	echo -e "[prefs]\n" > "$pwsyncconfig/config.toml"
+	echo -e "[prefs]\nretroarch_cfg = '$configpath'\n" > "$pwsyncconfig/config.toml"
 fi
 
 # we'll think about that later on :))
